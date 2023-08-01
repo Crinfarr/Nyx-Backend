@@ -16,6 +16,8 @@ server.on('request', (req, res) => {
         default: {
             res.writeHead(404)
             res.write(readFileSync('./page/errors/404.html'));
+            res.end();
+            break;
         }
     }
 });
